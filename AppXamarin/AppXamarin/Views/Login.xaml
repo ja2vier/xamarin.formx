@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 xmlns:vm="clr-namespace:AppXamarin.ViewModels"
+			 x:Class="AppXamarin.Views.Login">
+	<ContentPage.BindingContext>
+		<vm:LoginViewModels/>
+	</ContentPage.BindingContext>
+
+	<ContentPage.Content>
+		<Frame Margin="5" Padding="5">
+		<StackLayout Orientation="Vertical" VerticalOptions="Center">
+			<Label Text="Hola Bienvenido a la app" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+			<Entry Placeholder="DNI" Text="{Binding DNI}"></Entry>
+			<Entry Placeholder="Contraseña" Text="{Binding Contra}"></Entry>
+			<Button Text="Login" Command="{Binding LoginCommand}"></Button>			
+		</StackLayout>
+		</Frame>
+	</ContentPage.Content>
+</ContentPage>
